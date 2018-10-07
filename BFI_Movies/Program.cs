@@ -45,6 +45,8 @@ namespace BFI_Movies
             string[] filmInfo;
             // And another for holding the global average
             int globalAv = 0;
+            int ukUsaAv = 0;
+            int ukUsaCount = 0;
 
             // Loop through the 15 different films from position 3 in the list
             for (int i = 2; i < 17; i++)
@@ -73,11 +75,22 @@ namespace BFI_Movies
                 }
                 // Once we've got all the vaues needed from the film, add it to the global average
                 globalAv += Int32.Parse(filmGross);
+                // Check to see if it is of UK/USA origin
+                if (filmInfo[2] == "UK/USA")
+                {
+                    // If yes, then add on the weekend gross to the total
+                    ukUsaAv += Int32.Parse(filmGross);
+                    // Increment the number of films of this orgin for division later
+                    ukUsaCount++;
+                }
             }
             // Once we've got all the films' weekend gross, divide the total by 15 for the average
             globalAv = globalAv / 15;
             // Output the average into the console
             Console.WriteLine("The average weekend gross for the top 15 films was: £{0}", globalAv.ToString("N0"));
+            // Then we want to output the UK/USA origin totals
+            ukUsaAv = ukUsaAv / ukUsaCount;
+            Console.WriteLine("The average weekend gross for films of UK/USA origin is: £{0}", ukUsaAv.ToString("N0"));
             Console.ReadLine();
         }
     }
