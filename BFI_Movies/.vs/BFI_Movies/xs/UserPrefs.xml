@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{FABA5006-6D6C-4F40-8317-00C4ED4388D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="bfi_database.resx">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="55" Column="1" />
-      <File FileName="bfi_database.resx" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="106" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BFI_Movies" expanded="True">
             <Node name="BFI_Movies" expanded="True">
-              <Node name="bfi_database.resx" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

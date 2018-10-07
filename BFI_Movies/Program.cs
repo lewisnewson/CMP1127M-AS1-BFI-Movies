@@ -47,6 +47,8 @@ namespace BFI_Movies
             int globalAv = 0;
             int ukUsaAv = 0;
             int ukUsaCount = 0;
+            bool firstChecked = false;
+            int viewings = 0;
 
             // Loop through the 15 different films from position 3 in the list
             for (int i = 2; i < 17; i++)
@@ -83,6 +85,14 @@ namespace BFI_Movies
                     // Increment the number of films of this orgin for division later
                     ukUsaCount++;
                 }
+                // Now we need to figure out how many views there were but for the first film only
+                if (firstChecked == false)
+                {
+                    // Divide the total gross by 8 (1 viewing = £8)
+                    viewings = Int32.Parse(filmGross) / 8;
+                    // We'll swap a boolean over so we only check the first iteration
+                    firstChecked = true;
+                }
             }
             // Once we've got all the films' weekend gross, divide the total by 15 for the average
             globalAv = globalAv / 15;
@@ -91,6 +101,7 @@ namespace BFI_Movies
             // Then we want to output the UK/USA origin totals
             ukUsaAv = ukUsaAv / ukUsaCount;
             Console.WriteLine("The average weekend gross for films of UK/USA origin is: £{0}", ukUsaAv.ToString("N0"));
+            Console.WriteLine("‘Disney’s Christopher Robin had {0} viewings this weekend", viewings);
             Console.ReadLine();
         }
     }
