@@ -67,7 +67,7 @@ namespace BFI_Movies
                     // Strip everything from the element but numbers
                     filmInfo[increm] = Regex.Replace(filmInfo[increm], "[^0-9]+", string.Empty);
                     // Add the value left behind onto the average for that film
-                    filmGross += Int32.Parse(filmInfo[increm]);
+                    filmGross += filmInfo[increm];
                     // Increment up another element
                     increm += 1;
                 }
