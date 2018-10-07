@@ -1,6 +1,5 @@
 /Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/bin/Debug/BFI_Movies.exe
 /Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/bin/Debug/BFI_Movies.pdb
-/Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.csprojAssemblyReference.cache
 /Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.csproj.CoreCompileInputs.cache
 /Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.exe
 /Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.pdb
