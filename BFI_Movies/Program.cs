@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace BFI_Movies
 {
@@ -30,10 +31,8 @@ namespace BFI_Movies
                     // Read the next line
                     line = reader.ReadLine();
                 }
-
                 // Close the file
                 reader.Close();
-                Console.ReadLine();
             }
             // Catch the execption if there is one
             catch (Exception e)
@@ -44,26 +43,42 @@ namespace BFI_Movies
 
             // Declare a variable for holding the split string
             string[] filmInfo;
+            // And another for holding the global average
+            int globalAv = 0;
 
             // Loop through the 15 different films from position 3 in the list
             for (int i = 2; i < 17; i++)
             {
                 // Print out the film and it's information
-                Console.WriteLine($"{rawData[i]}");
+                // Console.WriteLine($"{rawData[i]}");
                 // Split the info into an array for looking through
                 filmInfo = rawData[i].Split(',');
 
-                string average = "";
+                // Setup some variables for calculating weekend gross
+                string filmGross = "";
                 int increm = 3;
+                // Here we get the last charcter to check if we need another index from the array
                 char last = filmInfo[increm][filmInfo[increm].Length - 1];
+                // Untill we reach the end of a number, keep adding the elements
                 while (last != '"')
                 {
-                    average += filmInfo[increm];
+                    // Get the last character from the element to check for a " mark
                     last = filmInfo[increm][filmInfo[increm].Length - 1];
+                    // Strip everything from the element but numbers
+                    filmInfo[increm] = Regex.Replace(filmInfo[increm], "[^0-9]+", string.Empty);
+                    // Add the value left behind onto the average for that film
+                    filmGross += Int32.Parse(filmInfo[increm]);
+                    // Increment up another element
                     increm += 1;
                 }
-                Console.WriteLine(average);
+                // Once we've got all the vaues needed from the film, add it to the global average
+                globalAv += Int32.Parse(filmGross);
             }
+            // Once we've got all the films' weekend gross, divide the total by 15 for the average
+            globalAv = globalAv / 15;
+            // Output the average into the console
+            Console.WriteLine("The average weekend gross for the top 15 films was: £{0}", globalAv.ToString("N0"));
+            Console.ReadLine();
         }
     }
 }
