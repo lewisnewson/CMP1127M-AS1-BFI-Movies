@@ -42,9 +42,27 @@ namespace BFI_Movies
                 Console.WriteLine("Exception: " + e.Message);
             }
 
+            // Declare a variable for holding the split string
+            string[] filmInfo;
+
+            // Loop through the 15 different films from position 3 in the list
             for (int i = 2; i < 17; i++)
             {
+                // Print out the film and it's information
                 Console.WriteLine($"{rawData[i]}");
+                // Split the info into an array for looking through
+                filmInfo = rawData[i].Split(',');
+
+                string average = "";
+                int increm = 3;
+                char last = filmInfo[increm][filmInfo[increm].Length - 1];
+                while (last != '"')
+                {
+                    average += filmInfo[increm];
+                    last = filmInfo[increm][filmInfo[increm].Length - 1];
+                    increm += 1;
+                }
+                Console.WriteLine(average);
             }
         }
     }

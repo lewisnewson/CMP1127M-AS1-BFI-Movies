@@ -1,8 +1,19 @@
 ﻿<Properties StartupConfiguration="{FABA5006-6D6C-4F40-8317-00C4ED4388D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="assets/bfi-weekend-box-office-report-24-26-august-2018.csv">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="65" Column="1" />
+      <File FileName="assets/bfi-weekend-box-office-report-24-26-august-2018.csv" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BFI_Movies" expanded="True">
+            <Node name="/Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/assets/bfi-weekend-box-office-report-24-26-august-2018.csv" selected="True" />
+            <Node name="BFI_Movies" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
