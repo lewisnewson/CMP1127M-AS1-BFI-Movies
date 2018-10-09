@@ -1,19 +1,8 @@
 ﻿<Properties StartupConfiguration="{FABA5006-6D6C-4F40-8317-00C4ED4388D5}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="106" Column="2" />
+      <File FileName="Program.cs" Line="109" Column="2" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BFI_Movies" expanded="True">
-            <Node name="BFI_Movies" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

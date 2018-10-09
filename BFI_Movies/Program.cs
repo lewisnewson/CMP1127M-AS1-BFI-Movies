@@ -39,6 +39,10 @@ namespace BFI_Movies
             {
                 // Print that execption out
                 Console.WriteLine("Exception: " + e.Message);
+                // Pause the program for the user to ready the exception
+                Console.ReadLine();
+                // Close the application once a key is pressed
+                Environment.Exit(0);
             }
 
             // Declare a variable for holding the split string
@@ -101,7 +105,8 @@ namespace BFI_Movies
             // Then we want to output the UK/USA origin totals
             ukUsaAv = ukUsaAv / ukUsaCount;
             Console.WriteLine("The average weekend gross for films of UK/USA origin is: £{0}", ukUsaAv.ToString("N0"));
-            Console.WriteLine("‘Disney’s Christopher Robin had {0} viewings this weekend", viewings);
+            // Output how many tickets were sold for the Disney film
+            Console.WriteLine("Disney’s Christopher Robin had {0} viewings this weekend", viewings);
             Console.ReadLine();
         }
     }
