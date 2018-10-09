@@ -9,41 +9,31 @@ namespace BFI_Movies
     {
         public static void Main(string[] args)
         {
-            // Declare a variable for use with printing out the lines
-            String line;
             // Also declare a list for holding the different lines
             List<string> rawData = new List<string>();
 
-            // Use a try catch incase the file can't be found
-            try
-            {
-                // Create a stream reader and pass it the file name
-                StreamReader reader = new StreamReader("bfi-weekend-box-office-report-24-26-august-2018.csv");
-
-                // Read the first line
-                line = reader.ReadLine();
-
-                // Continue to read the whole file
-                while (line != null)
-                {
-                    // Add the line to the list
-                    rawData.Add(line);
-                    // Read the next line
-                    line = reader.ReadLine();
-                }
-                // Close the file
-                reader.Close();
-            }
-            // Catch the execption if there is one
-            catch (Exception e)
-            {
-                // Print that execption out
-                Console.WriteLine("Exception: " + e.Message);
-                // Pause the program for the user to ready the exception
-                Console.ReadLine();
-                // Close the application once a key is pressed
-                Environment.Exit(0);
-            }
+			// Try to read the data from the resource
+			try
+			{
+				// Use the BFI csv saved as a resource and split it on each line
+				string[] films = Properties.Resources.bfi_weekend_box_office_report_24_26_august_2018.Split('\n');
+				// Loop through each line and add it to the list
+				foreach (string film in films)
+				{
+					// Add the line to the list
+					rawData.Add(film);
+				}
+			}
+			// Incase there is a problem reading the resource
+			catch (Exception e)
+			{
+				// Print that execption out
+				Console.WriteLine("Exception: " + e.Message);
+				// Pause the program for the user to ready the exception
+				Console.ReadLine();
+				// Close the application once a key is pressed
+				Environment.Exit(0);
+			}
 
             // Declare a variable for holding the split string
             string[] filmInfo;
