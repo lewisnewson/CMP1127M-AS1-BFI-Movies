@@ -20,3 +20,5 @@ C:/Users/Student/Desktop/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Mo
 /Users/lewisnewson/Downloads/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.csproj.CoreCompileInputs.cache
 /Users/lewisnewson/Downloads/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.exe
 /Users/lewisnewson/Downloads/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.pdb
+/Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.Properties.Resources.resources
+/Users/lewisnewson/repos/CMP1127M-AS1-BFI-Movies/BFI_Movies/obj/x86/Debug/BFI_Movies.csproj.GenerateResource.cache

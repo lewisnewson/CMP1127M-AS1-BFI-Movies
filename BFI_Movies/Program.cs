@@ -97,6 +97,12 @@ namespace BFI_Movies
             Console.WriteLine("The average weekend gross for films of UK/USA origin is: £{0}", ukUsaAv.ToString("N0"));
             // Output how many tickets were sold for the Disney film
             Console.WriteLine("Disney’s Christopher Robin had {0} viewings this weekend", viewings);
+            // Output the previous weekend gross for the Disney film
+            int disneyGross = (2138824 / ((100 - 16))) * 100;
+            Console.WriteLine("Last weekend, Disney's Christopher Robin grossed £{0}", disneyGross.ToString("N0"));
+            // Output the previous weekend gross for the Mamma Mia film
+            int mammaGross = (1701162 / ((100 - 24))) * 100;
+            Console.WriteLine("Last weekend, Mamma Mia: Here we Go Again! grossed £{0}", mammaGross.ToString("N0"));
             Console.ReadLine();
         }
     }
